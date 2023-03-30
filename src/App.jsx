@@ -1,4 +1,5 @@
 import PokemonCards from './components/PokemonCards'
+import NavBar from './components/NavBar';
 import './App.css'
 import { useState } from "react";
 
@@ -40,11 +41,8 @@ function App(){
   
   return (
     <div>
-      <PokemonCards pokemon={pokemonList[pokemonIndex]}/>
-        <div>
-          <button onClick={handleClick1}>Back</button>
-          <button onClick={handleClick2}>Next</button>
-        </div>
+      <PokemonCards pokemon = {pokemonList[pokemonIndex]}/>
+      <NavBar handleClick1 = {handleClick1} handleClick2={handleClick2}/>     
     </div>
   )
 };
